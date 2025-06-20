@@ -27,15 +27,25 @@ const inventory = [
  */
 function logNames(items) {
   // TODO: use `forEach`
+  inventory.forEach((item) => console.log(item));
 }
 
 /**
  * @param {Item[]} items - array of items
  * @returns {string[]} an array of item names in all uppercase
  */
-function getUppercaseNames(items) {
+  function getUppercaseNames (items) {
   // TODO: use `map`
-}
+       const uppercaseNames = inventory;
+      // Still working on the code
+      // const upperCaseArray = inventory;
+     // const upperCase = upperCaseArray.map(name => name.toUpperCase);
+    // return upperCase;
+    const upperCase = uppercaseNames.map(name => name.toUpperCase());
+    return upperCase;
+ };
+
+
 
 /**
  * @param {Item[]} items - array of items
@@ -44,6 +54,11 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].id === id) {
+      return items[i];
+    }
+  }
 }
 
 /**
