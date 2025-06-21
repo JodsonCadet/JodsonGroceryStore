@@ -36,13 +36,11 @@ function logNames(items) {
  */
   function getUppercaseNames (items) {
   // TODO: use `map`
-       const uppercaseNames = inventory;
-      // Still working on the code
-      // const upperCaseArray = inventory;
-     // const upperCase = upperCaseArray.map(name => name.toUpperCase);
-    // return upperCase;
-    const upperCase = uppercaseNames.map(name => name.toUpperCase());
-    return upperCase;
+    //     Still working on the code
+    //    const upperCaseArray = inventory;
+    //   const upperCase = upperCaseArray.map(upperCaseArray => upperCaseArray.toUpperCase());
+    //  return upperCase;
+    return items.map(item => item.name.toUpperCase());
  };
 
 
@@ -68,6 +66,12 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  const foundItem = items.find(item => item.itemName === name);
+  if (foundItem) {
+    return foundItem.price;
+  } else {
+    return "Did not found item with name";
+  }
 }
 
 /**
@@ -77,6 +81,8 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  const SpecificCategory = 'fruit';
+  return items.filter(item => item.category === SpecificCategory);
 }
 
 /**
