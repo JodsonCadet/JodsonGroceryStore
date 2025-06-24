@@ -91,7 +91,10 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
+  const totalItems = items.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0);
+  return totalItems;
 }
+
 
 /**
  * @param {Item[]} items - array of items
@@ -99,6 +102,8 @@ function countItems(items) {
  */
 function getTotalPrice(items) {
   // TODO: use `reduce`
+  return items.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
+  
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
